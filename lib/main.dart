@@ -15,6 +15,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  double initialSliderVal = 0;
+  String groupVal = "India";
+  bool adaptiveSwitchVal = false;
+
   @override
   Widget build(BuildContext context) {
     return (isIOS == false)
@@ -22,6 +26,7 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             home: Scaffold(
               appBar: AppBar(
+                backgroundColor: const Color(0xff54759E),
                 title: const Text(
                   "Platform Convertor",
                 ),
@@ -39,7 +44,13 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ],
               ),
-              body: Container(),
+              body: Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [],
+                ),
+              ),
             ),
           )
         : CupertinoApp(
@@ -57,7 +68,13 @@ class _MyAppState extends State<MyApp> {
                   },
                 ),
               ),
-              child: Container(),
+              child: Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [],
+                ),
+              ),
             ),
           );
   }
